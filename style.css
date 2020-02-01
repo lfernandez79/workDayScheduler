@@ -18,8 +18,9 @@ textarea{
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 2px solid rgb(109, 161, 161);
 }
+
 
 .description{
   white-space: pre-wrap;
