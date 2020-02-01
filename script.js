@@ -13,8 +13,8 @@ $(document).ready(function () {
         var row = $(`<div data-time=${i} id="${i}" class="row">`);
 
         // Create a columns
-        var column1 = $('<div class="col-sm-2"> <p class="hour">' + currentTime(i) + "</p>");
-        var column2 = $(`<div class="col-sm-8"><textarea id=text${i} class="col-md-12 description" placeholder="To do item"></textarea>`);
+        var column1 = $('<div class="col-sm-2 bg-light mb-4 text-center"> <h3 class="hour">' + currentTime(i) + "</h3>");
+        var column2 = $(`<div class="col-sm-8"><textarea id=text${i} class="col-md-12 bg-light description" placeholder="To do item"></textarea>`);
         var column3 = $(`<div class="col-sm-2"><button class="col-md-12 btn btn-danger saveBtn" id=${i}><i class="fas fa-cloud fa-3x"></i></button>`);
         
         //append column to row
@@ -27,7 +27,7 @@ $(document).ready(function () {
     }
     
     function currentTime(event) {
-        var time = event >= 12 ? "pm" : "am";
+        var time = event >= 12 ? " PM" : " AM";
         event = event % 12;
         event = event ? event : 12;
         return event + time;
