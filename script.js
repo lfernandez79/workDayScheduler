@@ -1,5 +1,10 @@
 $(document).ready(function () {
-    $("#currentDay").text(moment().format("dddd, MMMM Do h:mm a"));
+    function timeUpdate() {
+        $("#currentDay").text(moment().format("dddd, MMMM Do h:mm:ss a"));
+    } 
+    setInterval(timeUpdate, 1000);
+       
+    
     // for (let i=8; i<17; i++) {
         // const element = array[i];
 
