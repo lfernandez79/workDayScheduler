@@ -5,19 +5,20 @@ body {
 }
 
 textarea{
+
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+  color: black;
   border-left: 1px solid black;
+  border-right: 1px solid rgb(141, 136, 136);
   padding: 10px;
 }
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
   border-bottom: 2px solid rgb(109, 161, 161);
   
 }
@@ -27,7 +28,3 @@ textarea{
   color: lightblue;
 }
 
- /* {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
-} */
