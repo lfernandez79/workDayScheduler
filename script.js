@@ -9,13 +9,13 @@ $(document).ready(function () {
     // loop to create rows  from 8 to 5 PM
     for (let i=8; i<18; i++) {
 
-        // Create row
+        // Create row with loop above
         var row = $(`<div data-time=${i} id="${i}" class="row">`);
 
         // Create a columns
         var column1 = $('<div class="col-md-2 bg-light mb-4 text-center text-success"> <h3 class="hour">' + currentTime(i) + "</h3>");
         var column2 = $(`<div class="col-md-8"><textarea id=text${i} class="col-md-12 bg-light description" placeholder="To do item"></textarea>`);
-        var column3 = $(`<div class="col-md-2"><button class="col-md-6 btn btn-danger saveBtn" id=${i}><i class="fas fa-cloud fa-lg"></i></button>`);
+        var column3 = $(`<button class="saveButton col-sm-12 col-md-6 col-lg-1 mb-1 btn btn-danger" id=${i}><i class="fas fa-cloud fa-lg"></i></button>`);
         
         //append column to row
         row.append(column1, column2, column3);
@@ -26,6 +26,7 @@ $(document).ready(function () {
 
     }
     
+    // Display dateTime in 12 hours with AM/PM format on column1
     function currentTime(event) {
         var time = event >= 12 ? " PM" : " AM";
         event = event % 12;
@@ -35,3 +36,4 @@ $(document).ready(function () {
 
 
 })
+
