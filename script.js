@@ -34,6 +34,11 @@ $(document).ready(function () {
         return event + time;
     }
 
+    // var saveBtn = $(".saveButton");
+    $(".saveButton").on("click", function() {
+        var eventText = (this).parent().children(".description").val();
+        localStorage.setItem(eventText);
 
+    } )
 })
 
