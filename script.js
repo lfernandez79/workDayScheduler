@@ -7,7 +7,7 @@ $(document).ready(function () {
     setInterval(timeUpdate, 1000);
           
     // loop to create rows  from 8 to 5 PM
-    for (let i=8; i<18; i++) {
+    for (var i=8; i<18; i++) {
 
         // Create row with loop above
         var row = $(`<div data-time=${i} id="${i}" class="row">`);
@@ -35,10 +35,10 @@ $(document).ready(function () {
     }
 
     // var saveBtn = $(".saveButton");
-    $(".saveButton").on("click", function() {
-        var eventText = (this).parent().children(".description").val();
-        localStorage.setItem(eventText);
+    // $(".saveButton").on("click", function() {
+    //     var eventText = (this).parent().children(".description").val();
+    //     localStorage.setItem(eventText);
 
-    } )
-})
+    // });
+});
 
